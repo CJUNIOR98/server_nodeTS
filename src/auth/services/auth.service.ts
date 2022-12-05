@@ -17,8 +17,8 @@ export class AuthService extends ConfigServer {
     username: string, 
     password: string)
     : Promise<UserEntity | null> {
-      const userByEmail = await this.userService.findUserByEmail(username);
-      const userByUsername = await this.userService.findUserByUsername(username);
+      const userByEmail = await this.userService.findByEmail(username);
+      const userByUsername = await this.userService.findByUsername(username);
 
       if(userByUsername) {
         const isMatch = await bcrypt.compare(password, userByUsername.password)
@@ -40,7 +40,7 @@ export class AuthService extends ConfigServer {
 
   public async generateJWT(
     user: UserEntity): Promise<{accessToken: string; user: UserEntity}> {
-      const userConsult = await this.userService.findUserWhitRole(
+      const userConsult = await this.userService.findUserWithRole(
         user.id,
         user.role
       );
