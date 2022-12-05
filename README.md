@@ -13,20 +13,34 @@ API REST compleja con NodeJS utilizando como lenguage core `TypeScript` y `TypeO
 
 ## Lista de dependencias para instalacion:
 
-Dependencias necesarias:
+### Dependencias necesarias:
 
 ```
 npm install class-validator class-transformer cors dotenv express morgan mysql typeorm typeorm-naming-strategies typescript
 ```
 
-Dependencias de desarrollo necesarias:
+### Otras dependencias a instalar:
+
+```
+npm i passport passport-local passport-jwt jsonwebtoken bcrypt
+```
+
+### Dependencias de desarrollo necesarias:
 
 ```
 npm install -D @types/cors @types/express @types/morgan concurrently nodemon
+```
+
+### otras dependencias de desarrollo:
+
+```
+npm i -D ts-node @types/jsonwebtpken @types/passport @types/passport-local @types/passport-jwt
 ```
 
 ## Documentacion:
 
 ## Tambien puedes ver la docimentacion [aqui]()
 
-En la siguiente seccion, veras los `endpoints`, y la funcion que ejercecada uno en la Api, adicional de como configurar las `Variables de entorno` para su funcionamiento
+En la siguiente seccion, veras los `endpoints`, y la funcion que ejercecada uno en la Api, adicional de como configurar las `Variables de entorno` para su funcionamiento.
+
+## El repositorio y su documentacion se iran actualizando progresivamente
