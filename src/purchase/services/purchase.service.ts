@@ -1,7 +1,7 @@
-import { DeleteResult, UpdateResult } from "typeorm";
-import { BaseService } from "../../config/base.service";
-import { PurchaseDTO } from "../dto/purchase.dto";
-import { PurchaseEntity } from "../entitites/purchase.entity";
+import { DeleteResult, UpdateResult } from 'typeorm';
+import { BaseService } from '../../config/base.service';
+import { PurchaseDTO } from '../dto/purchase.dto';
+import { PurchaseEntity } from '../entitites/purchase.entity';
 export class PurchaseService extends BaseService<PurchaseEntity> {
   constructor() {
     super(PurchaseEntity);

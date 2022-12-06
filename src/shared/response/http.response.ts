@@ -1,4 +1,4 @@
-import { Response } from "express";
+import { Response } from 'express';
 
 export enum HttpStatus {
   OK = 200,
@@ -12,7 +12,7 @@ export class HttpResponse {
   Ok(res: Response, data?: any): Response {
     return res.status(HttpStatus.OK).json({
       status: HttpStatus.OK,
-      statusMsg: "Success",
+      statusMsg: 'Success',
       data: data,
     });
   }
@@ -20,7 +20,7 @@ export class HttpResponse {
   NotFound(res: Response, data?: any): Response {
     return res.status(HttpStatus.NOT_FOUND).json({
       status: HttpStatus.NOT_FOUND,
-      statusMsg: "Not Found",
+      statusMsg: 'Not Found',
       error: data,
     });
   }
@@ -28,7 +28,7 @@ export class HttpResponse {
   Unauthorized(res: Response, data?: any): Response {
     return res.status(HttpStatus.UNAUTHORIZED).json({
       status: HttpStatus.UNAUTHORIZED,
-      statusMsg: "Unauthorized",
+      statusMsg: 'Unauthorized',
       error: data,
     });
   }
@@ -36,7 +36,7 @@ export class HttpResponse {
   Forbidden(res: Response, data?: any): Response {
     return res.status(HttpStatus.FORBIDDEN).json({
       status: HttpStatus.FORBIDDEN,
-      statusMsg: "Forbidden",
+      statusMsg: 'Forbidden',
       error: data,
     });
   }
@@ -44,7 +44,7 @@ export class HttpResponse {
   Error(res: Response, data?: any): Response {
     return res.status(HttpStatus.INTERNAL_SERVER_ERROR).json({
       status: HttpStatus.INTERNAL_SERVER_ERROR,
-      statusMsg: "Internal server error",
+      statusMsg: 'Internal server error',
       error: data,
     });
   }

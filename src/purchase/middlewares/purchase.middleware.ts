@@ -1,8 +1,8 @@
-import { validate } from "class-validator";
-import { NextFunction, Request, Response } from "express";
+import { validate } from 'class-validator';
+import { NextFunction, Request, Response } from 'express';
 
-import { HttpResponse } from "../../shared/response/http.response";
-import { PurchaseDTO } from "../dto/purchase.dto";
+import { HttpResponse } from '../../shared/response/http.response';
+import { PurchaseDTO } from '../dto/purchase.dto';
 
 export class PurchaseMiddleware {
   constructor(

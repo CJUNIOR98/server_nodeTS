@@ -1,8 +1,8 @@
-import { DeleteResult, UpdateResult } from "typeorm";
-import { BaseService } from "../../config/base.service";
-import { PurchaseProductDTO } from "../dto/purchase-product.dto";
-import { PurchaseProductEntity } from "../entitites/purchases-products.entity";
-import { ProductService } from "../../product/services/product.service";
+import { DeleteResult, UpdateResult } from 'typeorm';
+import { BaseService } from '../../config/base.service';
+import { PurchaseProductDTO } from '../dto/purchase-product.dto';
+import { PurchaseProductEntity } from '../entitites/purchases-products.entity';
+import { ProductService } from '../../product/services/product.service';
 export class PurchaseProductService extends BaseService<PurchaseProductEntity> {
   constructor(
     private readonly productService: ProductService = new ProductService()

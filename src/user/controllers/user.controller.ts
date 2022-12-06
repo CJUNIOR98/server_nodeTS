@@ -1,8 +1,8 @@
-import { Request, Response } from "express";
-import * as jwt from "jsonwebtoken";
-import { UserService } from "../services/user.service";
-import { HttpResponse } from "../../shared/response/http.response";
-import { DeleteResult, UpdateResult } from "typeorm";
+import { Request, Response } from 'express';
+import * as jwt from 'jsonwebtoken';
+import { UserService } from '../services/user.service';
+import { HttpResponse } from '../../shared/response/http.response';
+import { DeleteResult, UpdateResult } from 'typeorm';
 
 export class UserController {
   constructor(
@@ -13,7 +13,7 @@ export class UserController {
     try {
       const data = await this.userService.findAllUser();
       if (data.length === 0) {
-        return this.httpResponse.NotFound(res, "No existe dato");
+        return this.httpResponse.NotFound(res, 'No existe dato');
       }
       return this.httpResponse.Ok(res, data);
     } catch (e) {
@@ -26,7 +26,7 @@ export class UserController {
     try {
       const data = await this.userService.findUserById(id);
       if (!data) {
-        return this.httpResponse.NotFound(res, "No existe dato");
+        return this.httpResponse.NotFound(res, 'No existe dato');
       }
       return this.httpResponse.Ok(res, data);
     } catch (e) {
@@ -39,7 +39,7 @@ export class UserController {
     try {
       const data = await this.userService.findUserWithRelation(id);
       if (!data) {
-        return this.httpResponse.NotFound(res, "No existe dato");
+        return this.httpResponse.NotFound(res, 'No existe dato');
       }
       return this.httpResponse.Ok(res, data);
     } catch (e) {
@@ -65,7 +65,7 @@ export class UserController {
       );
 
       if (!data.affected) {
-        return this.httpResponse.NotFound(res, "Hay un error en actualizar");
+        return this.httpResponse.NotFound(res, 'Hay un error en actualizar');
       }
 
       return this.httpResponse.Ok(res, data);
@@ -85,7 +85,7 @@ export class UserController {
           req.body
         );
         if (!data.affected) {
-          return this.httpResponse.NotFound(res, "Hay un error en actualizar");
+          return this.httpResponse.NotFound(res, 'Hay un error en actualizar');
         }
         return this.httpResponse.Ok(res, data);
       }
@@ -100,7 +100,7 @@ export class UserController {
     try {
       const data: DeleteResult = await this.userService.deleteUser(id);
       if (!data.affected) {
-        return this.httpResponse.NotFound(res, "Hay un error en borrar");
+        return this.httpResponse.NotFound(res, 'Hay un error en borrar');
       }
       return this.httpResponse.Ok(res, data);
     } catch (e) {

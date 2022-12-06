@@ -1,8 +1,8 @@
-import { DeleteResult, UpdateResult } from "typeorm";
-import * as bcrypt from "bcrypt";
-import { BaseService } from "../../config/base.service";
-import { RoleType, UserDTO } from "../dto/user.dto";
-import { UserEntity } from "../entities/user.entity";
+import { DeleteResult, UpdateResult } from 'typeorm';
+import * as bcrypt from 'bcrypt';
+import { BaseService } from '../../config/base.service';
+import { RoleType, UserDTO } from '../dto/user.dto';
+import { UserEntity } from '../entities/user.entity';
 export class UserService extends BaseService<UserEntity> {
   constructor() {
     super(UserEntity);
@@ -20,7 +20,7 @@ export class UserService extends BaseService<UserEntity> {
     role: RoleType
   ): Promise<UserEntity | null> {
     const user = (await this.execRepository)
-      .createQueryBuilder("user")
+      .createQueryBuilder('user')
       .where({ id })
       .andWhere({ role })
       .getOne();
@@ -30,23 +30,23 @@ export class UserService extends BaseService<UserEntity> {
 
   async findUserWithRelation(id: string): Promise<UserEntity | null> {
     return (await this.execRepository)
-      .createQueryBuilder("user")
-      .leftJoinAndSelect("user.customer", "customer")
+      .createQueryBuilder('user')
+      .leftJoinAndSelect('user.customer', 'customer')
       .where({ id })
       .getOne();
   }
 
   async findByEmail(email: string): Promise<UserEntity | null> {
     return (await this.execRepository)
-      .createQueryBuilder("user")
-      .addSelect("user.password")
+      .createQueryBuilder('user')
+      .addSelect('user.password')
       .where({ email })
       .getOne();
   }
   async findByUsername(username: string): Promise<UserEntity | null> {
     return (await this.execRepository)
-      .createQueryBuilder("user")
-      .addSelect("user.password")
+      .createQueryBuilder('user')
+      .addSelect('user.password')
       .where({ username })
       .getOne();
   }
