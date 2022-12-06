@@ -48,6 +48,7 @@
     "@types/passport-local": "^1.0.34",
     "concurrently": "^7.6.0",
     "nodemon": "^2.0.20",
+    "prettier": "^2.8.0",
     "ts-node": "^10.9.1"
   }
 }
