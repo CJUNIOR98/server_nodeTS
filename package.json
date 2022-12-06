@@ -14,11 +14,11 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/CJUNIOR98/server_nodeTS"
   },
   "author": "Carlos Mejia",
   "license": "ISC",
-  "homepage": "",
+  "homepage": "https://github.com/CJUNIOR98/server_nodeTS#README",
   "dependencies": {
     "bcrypt": "^5.1.0",
     "class-transformer": "^0.5.1",
