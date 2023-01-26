@@ -39,7 +39,7 @@ npm i -D ts-node @types/jsonwebtpken @types/passport @types/passport-local @type
 
 ## Documentacion:
 
-## Tambien puedes ver la documentacion [aqui]()
+## Tambien puedes ver la documentacion [aqui](https://documenter.getpostman.com/view/22441767/2s8ZDeSJaY)
 
 En la siguiente seccion, veras los `endpoints`, y la funcion que ejercecada uno en la Api, adicional de como configurar las `Variables de entorno` para su funcionamiento.
 
